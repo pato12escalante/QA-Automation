@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+test.setTimeout(120000);
 
 test('desactivar etiquetas "editable"', async ({ page }) => {
   await page.goto('https://demos.staging.khor.mx/');
@@ -14,6 +15,9 @@ test('desactivar etiquetas "editable"', async ({ page }) => {
   await page.locator('div').filter({ hasText: /^Configuración$/ }).nth(1).click();
   await page.getByText('Etiquetas del sistem...').click();
   await page.getByRole('switch').nth(4).click();
+
+
+  //DESACTIVAR ETIQUETAS EDITABLE "DATOS GENERALES"
   await page.locator('div:nth-child(3) > div:nth-child(7) > span > .ant-switch').first().click();
   await page.locator('div:nth-child(4) > div:nth-child(7) > span > .ant-switch').first().click();
   await page.locator('div:nth-child(5) > div:nth-child(7) > span > .ant-switch').first().click();
@@ -52,6 +56,104 @@ test('desactivar etiquetas "editable"', async ({ page }) => {
   await page.locator('div:nth-child(39) > div:nth-child(7) > span > .ant-switch').click();
   await page.locator('div:nth-child(40) > div:nth-child(7) > span > .ant-switch').click();
   await page.locator('div:nth-child(41) > div:nth-child(7) > span > .ant-switch').click();
+
+  //DESACTIVAR ETIQUETAS EDITABLE "DIRECCIONES"
+  await page.locator('div:nth-child(2) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(2) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(2) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(3) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(2) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(4) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(2) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(5) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(2) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(6) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(2) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(7) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(2) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(8) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(2) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(9) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(2) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(10) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(2) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(11) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(2) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(12) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(2) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(13) > div:nth-child(7) > span > .ant-switch').click();
+
+  //DESACTIVAR ETIQUETAS EDITABLE "TELEFONOS"
+  await page.locator('div:nth-child(3) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(2) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(3) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(3) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(3) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(4) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(3) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(5) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(3) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(6) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(3) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(7) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(3) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(8) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(3) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(9) > div:nth-child(7) > span > .ant-switch').click();
+  
+  //DESACTIVAR ETIQUETAS EDITABLE "CONTACTOS"
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(2) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(3) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(4) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(5) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(6) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(7) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(8) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(9) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(10) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(11) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(12) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(13) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(14) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(15) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(16) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(17) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(4) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(18) > div:nth-child(7) > span > .ant-switch').click();
+
+
+  //DESACTIVAR ETIQUETAS EDITABLE "CV"
+  await page.locator('div:nth-child(5) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(2) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(5) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(3) > div:nth-child(7) > span > .ant-switch').click();
+  
+
+  //DESACTIVAR ETIQUETAS EDITABLE "HABILIDADES"
+  await page.locator('div:nth-child(7) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(2) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(7) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(3) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(7) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(4) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(7) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(5) > div:nth-child(7) > span > .ant-switch').click();
+
+  //DESACTIVAR ETIQUETAS EDITABLE "DATOS DE SESION"
+  await page.locator('div:nth-child(8) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(2) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(8) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(3) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(8) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(4) > div:nth-child(7) > span > .ant-switch').click();
+  
+  //DESACTIVAR ETIQUETAS EDITABLE "CUENTAS BANCARIAS"
+  await page.locator('div:nth-child(9) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(2) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(9) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(3) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(9) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(4) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(9) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(5) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(9) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(6) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(9) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(7) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(9) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(8) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(9) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(9) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(9) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(10) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(9) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(11) > div:nth-child(7) > span > .ant-switch').click();
+  
+  
+  //DESACTIVAR ETIQUETAS EDITABLE "EXPERIENCIA LABORAL"
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(2) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(3) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(4) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(5) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(6) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(7) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(8) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(9) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(10) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(11) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(12) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(13) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(14) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(15) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(16) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(17) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(18) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(19) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(20) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(21) > div:nth-child(7) > span > .ant-switch').click();
+  await page.locator('div:nth-child(12) > .ant-collapse-panel > .ant-collapse-body > div > .ant-card > .ant-card-body > div:nth-child(22) > div:nth-child(7) > span > .ant-switch').click();
+
+
   await page.getByRole('img', { name: 'user' }).locator('svg').click();
   await page.getByText('Cerrar sesión').click();
   await page.locator('span').nth(4).click();
@@ -68,7 +170,7 @@ test('desactivar etiquetas "editable"', async ({ page }) => {
   await page.locator('div').filter({ hasText: /^Personas$/ }).nth(1).click();
   await page.getByRole('menu').getByText('Personas').click();
   await page.locator('a').filter({ hasText: 'INT00003540' }).click();
-  await page.waitForTimeout(3000);
+  await page.waitForTimeout(5000);
   await expect(page.getByRole('textbox', { name: '* Nombre(s)' })).toBeDisabled();
 
   await expect(page.getByRole('combobox', { name: 'Tratamiento' })).toBeDisabled();
@@ -103,6 +205,8 @@ test('desactivar etiquetas "editable"', async ({ page }) => {
   await expect(page.getByRole('switch', { name: 'Disponibilidad para Viajar' })).toBeDisabled();
   await expect(page.getByRole('switch', { name: 'Disponibilidad para Cambio de' })).toBeDisabled();
   await expect(page.getByRole('textbox', { name: 'Fecha de Terminación Laboral' })).toBeDisabled();
+  
+
 
   
 });
