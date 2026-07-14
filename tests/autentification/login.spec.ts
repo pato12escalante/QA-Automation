@@ -7,7 +7,7 @@ test('login_test', async ({ page }) => {
     .fill('patricio.escalante');
 
   await page.getByRole('textbox', { name: 'Contraseña' })
-    .fill('Pato123456@');
+    .fill('Pato12345@');
 
   await page.getByRole('button', { name: 'Iniciar Sesión' })
     .click();
